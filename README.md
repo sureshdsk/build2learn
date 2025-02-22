@@ -1,59 +1,71 @@
-<p align="center">
-  <a>
-    <img src="./public/logo.png" height="96">
-    <h3 align="center">Next.js Prisma PostgreSQL Auth Starter with Shadcn</h3>
-  </a>
-</p>
+# 🚀 Build2Learn - Learn by Building!
 
-<p align="center">
-This is a <a href="https://nextjs.org/">Next.js</a> starter kit that uses <a href="https://next-auth.js.org/">Next-Auth</a> for simple email + password login<br/>
-<a href="https://www.prisma.io/">Prisma</a> as the ORM, and Postgres database to persist the data. This application uses <a href="https://ui.shadcn.com/">Shadcn</a> for UI components, and <a href="https://tailwindcss.com/">Tailwind CSS</a> for styling. It has integrated theming support, with support for multiple themes with a custom plugin.
+Welcome to **Build2Learn** – a community of passionate developers, makers, and problem-solvers who believe in **learning by building**! Whether you're a beginner or an experienced developer, this community helps you **collaborate, create, and grow** through real-world projects.
 
-<br/>
+---
 
-## Configure the Database
+## 🎯 What is Build2Learn?
+Build2Learn is an open community where developers:
+- 🏗 **Work on real projects** to gain hands-on experience.
+- 🤝 **Collaborate with like-minded people** and share knowledge.
+- 🎓 **Learn by doing** instead of just consuming tutorials.
+- 🌍 **Build impactful projects** that benefit the community.
 
-- create a `.env` file in the root of the project
+---
 
-```
-# Create a Postgres database
-POSTGRES_PRISMA_URL=
-POSTGRES_URL_NON_POOLING=
+## 💡 How It Works
+1. **Find a Project** – Browse open projects or propose your own.
+2. **Join a Team** – Collaborate with community members.
+3. **Start Building** – Work on features, fix bugs, and contribute.
+4. **Learn & Share** – Gain experience and help others grow.
+5. **Showcase Your Work** – Add projects to your portfolio.
 
-# Generate one with this command: openssl rand -base64 32
-NEXTAUTH_SECRET=
-```
+---
 
-First, run the development server:
+## 🌟 Why Join Build2Learn?
+✅ Gain **real-world experience**  
+✅ Improve **collaboration skills**  
+✅ Build a **strong portfolio**  
+✅ Contribute to **open-source projects**  
+✅ Be part of a **supportive learning environment**  
 
-```bash
-npm run dev
-```
+---
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## 🚀 Get Started
+1. **Join the Community**  
+   - Connect with us on Discord, GitHub, or social media.
+2. **Explore Projects**  
+   - Check the list of active projects in our repository.
+3. **Contribute**  
+   - Pick an issue, discuss with the team, and start coding!
+4. **Share Your Knowledge**  
+   - Write tutorials, mentor newcomers, or host workshops.
 
-## Theming with Shadcn
+---
 
-This starter kit uses Shadcn for UI components, and Tailwind CSS for styling. It has integrated theming support, with support for multiple themes with a custom plugin.
+## 🤝 How to Contribute?
+🔹 **Developers** – Write code, fix bugs, and improve features.  
+🔹 **Designers** – Create UI/UX designs and improve user experience.  
+🔹 **Writers** – Contribute technical documentation and blogs.  
+🔹 **Mentors** – Guide new members and share your knowledge.  
 
-### Creating a Theme
+💡 No matter your skill level, there's always a way to contribute!
 
-To create a theme, add to `lib/shadcn-plugin.ts`:
+---
 
-```ts
+## 📜 Code of Conduct
+We believe in a **respectful and inclusive** community.  
+<!-- Please follow our [Code of Conduct](CODE_OF_CONDUCT.md) to maintain a friendly environment. -->
 
- - add colors to `:root` object
-  `
-     "--brown-dark-1": "355 45% 31%",
-        "--magenta-dark-1": "200 55% 37%",
-        "--purple-dark-1": "261 51% 51%",
-        "--dark-green-1": "145 58% 55%",
+---
 
+<!-- ## 📢 Connect With Us!
+🌎 Website: [Coming Soon]  
+💬 Discord: [Join Here](#)  
+🐙 GitHub: [GitHub Repo](#)  
+📢 Twitter: [@Build2Learn](#)   -->
 
- - configure the `theme` object
+---
 
-    "dark-1": "hsl(var(--brown-dark-1))",
-    "dark-2": "hsl(var(--magenta-dark-1))",
-    "dark-3": "hsl(var(--purple-dark-1))",
-    "dark-4": "hsl(var(--dark-green-1))",
-```
+🔥 **Join Build2Learn and start building today!** 🚀  
+“**The best way to learn is to build!**” 🛠🎓
