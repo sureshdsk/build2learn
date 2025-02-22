@@ -10,9 +10,10 @@ import Image from "next/image";
 
 export default async function Header() {
   const navigation = [
-    { key: "Home", value: "" },
-    { key: "About", value: "features" },
-    { key: "Pricing", value: "pricing" },
+    // { key: "Home", value: "" },
+    // { key: "About", value: "features" },
+    { key: "Project List", value: "projects" },
+    { key: "Add Projects", value: "add-projects" },
   ] as INavLink[];
 
   const session = await getServerSession();
@@ -33,22 +34,22 @@ export default async function Header() {
                 </div>
               </>
             )) || (
-              <>
-                <div className="flex items-center space-x-6 ">
-                  <Image src="/logo.png" alt="logo" width={48} height={48} />
-                </div>
-                <div className="mx-6 ">
-                  <NavElements navigationLinks={navigation} />
-                </div>
-                <div className="ml-auto flex items-center space-x-4">
-                  <Link href="/register" className="">
-                  <Button variant="brown" >
-                      Register
-                    </Button>
-                  </Link>
-                </div>
-              </>
-            )}
+                <>
+                  <div className="flex items-center space-x-6 ">
+                    <Image src="/logo.png" alt="logo" width={48} height={48} />
+                  </div>
+                  <div className="mx-6 ">
+                    <NavElements navigationLinks={navigation} />
+                  </div>
+                  <div className="ml-auto flex items-center space-x-4">
+                    <Link href="/register" className="">
+                      <Button variant="brown" >
+                        Register
+                      </Button>
+                    </Link>
+                  </div>
+                </>
+              )}
           </div>
         </div>
       </div>
