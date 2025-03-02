@@ -1,80 +1,141 @@
 import Image from "next/image";
 import Link from "next/link";
-
+import { Users, Heart, Globe2, MessageSquare, ArrowRight, ChevronDown } from 'lucide-react';
 export default function Home() {
   return (
-    <div className="flex h-screen bg-white">
-      <div className="w-screen h-screen flex flex-col justify-center items-center">
-        <Image
-          width={512}
-          height={512}
-          src="/logo.png"
-          alt="Platforms on Vercel"
-          className="w-48 h-48"
-        />
-        <div className="text-center max-w-screen-sm mb-10">
-          <h1 className="text-stone-200 font-bold text-2xl">
-            Next.js Prisma PostgreSQL Auth Starter
-          </h1>
-          <p className="text-stone-400 mt-5">
-            This is a{" "}
-            <a
-              href="https://nextjs.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-stone-400 underline hover:text-stone-200 transition-all"
-            >
-              Next.js
-            </a>{" "}
-            starter kit that uses{" "}
-            <a
-              href="https://next-auth.js.org/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-stone-400 underline hover:text-stone-200 transition-all"
-            >
-              Next-Auth
-            </a>{" "}
-            for simple email + password login and a{" "}
-            <a
-              href="https://vercel.com/postgres"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-stone-400 underline hover:text-stone-200 transition-all"
-            >
-              Vercel Postgres
-            </a>{" "}
-            database to persist the data.
+    <div className="">
+      {/* Hero Section */}
+      <section className="relative bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
+        <div className="absolute inset-0 bg-black opacity-10 pattern-grid"></div>
+        <div className="flex flex-col-reverse md:flex-row items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-32 relative">
+          <div className="w-full md:w-1/2 mt-8 md:mt-0">
+            <Image src="/images/hero-fold.svg" width={800} height={600} alt="Community Platform" />
+          </div>
+          <div className="w-full md:w-1/2">
+            <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
+              Build2Learn
+            </h1>
+            <p className="text-xl text-purple-100 mb-8 leading-relaxed">
+              Join hundreds of passionate individuals in building meaningful connections, sharing ideas, and creating lasting impact in our thriving community platform.
+            </p>
+            <div className="flex flex-wrap gap-4">
+              <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition-colors flex items-center">
+                Join Community <ArrowRight className="ml-2 h-5 w-5" />
+              </button>
+            </div>
+          </div>
+        </div>
+
+        {/* <div className="absolute bottom-0 left-0 right-0 text-center">
+          <ChevronDown className="h-8 w-8 mx-auto mb-4 animate-bounce text-purple-200" />
+        </div> */}
+      </section>
+
+      {/* Features Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="text-center mb-16">
+            <h2 className="text-4xl font-bold text-gray-900 mb-4">Why Join Our Community?</h2>
+            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
+              Discover the benefits of being part of a vibrant and supportive community
+            </p>
+          </div>
+          <div className="grid md:grid-cols-3 gap-12">
+            {[
+              {
+                icon: <Users className="h-8 w-8 text-indigo-600" />,
+                title: "Connect with Like-minds",
+                description: "Meet people who share your interests and passions"
+              },
+              {
+                icon: <Heart className="h-8 w-8 text-indigo-600" />,
+                title: "Supportive Environment",
+                description: "Experience a welcoming space where everyone belongs"
+              },
+              {
+                icon: <Globe2 className="h-8 w-8 text-indigo-600" />,
+                title: "Global Network",
+                description: "Connect with members from around the world"
+              }
+            ].map((feature, index) => (
+              <div key={index} className="bg-white p-8 rounded-xl shadow-sm hover:shadow-md transition-shadow">
+                <div className="bg-indigo-50 w-16 h-16 rounded-lg flex items-center justify-center mb-6">
+                  {feature.icon}
+                </div>
+                <h3 className="text-xl font-semibold text-gray-900 mb-3">{feature.title}</h3>
+                <p className="text-gray-600">{feature.description}</p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Community Stats Section */}
+      <section className="py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-4 gap-8 text-center">
+            {[
+              { number: "10K+", label: "Active Members" },
+              { number: "500+", label: "Daily Discussions" },
+              { number: "50+", label: "Countries" },
+              { number: "100+", label: "Community Events" }
+            ].map((stat, index) => (
+              <div key={index} className="bg-gradient-to-br from-indigo-50 to-purple-50 p-8 rounded-xl">
+                <div className="text-4xl font-bold text-indigo-600 mb-2">{stat.number}</div>
+                <div className="text-gray-600">{stat.label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Testimonials Section */}
+      <section className="py-24 bg-gray-50">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl font-bold text-center text-gray-900 mb-16">What Our Members Say</h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {[
+              {
+                quote: "Being part of this community has transformed my professional network and opened up countless opportunities.",
+                author: "Sarah Johnson",
+                role: "Tech Entrepreneur"
+              },
+              {
+                quote: "The support and knowledge sharing in this community is incredible. I've learned so much from fellow members.",
+                author: "Michael Chen",
+                role: "Product Designer"
+              },
+              {
+                quote: "I've made lifelong friends and valuable connections through this amazing community.",
+                author: "Emma Rodriguez",
+                role: "Community Leader"
+              }
+            ].map((testimonial, index) => (
+              <div key={index} className="bg-white p-8 rounded-xl shadow-sm">
+                <MessageSquare className="h-8 w-8 text-indigo-600 mb-6" />
+                <p className="text-gray-600 mb-6 italic">"{testimonial.quote}"</p>
+                <div>
+                  <div className="font-semibold text-gray-900">{testimonial.author}</div>
+                  <div className="text-indigo-600">{testimonial.role}</div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-24 bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+          <h2 className="text-4xl font-bold mb-6">Ready to Join Our Community?</h2>
+          <p className="text-xl text-purple-100 mb-8 max-w-2xl mx-auto">
+            Take the first step towards connecting with like-minded individuals and becoming part of something special.
           </p>
+          <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition-colors">
+            Get Started Now
+          </button>
         </div>
-        <div className="flex space-x-3">
-          <Link
-            href="/protected"
-            prefetch={false} // workaround until https://github.com/vercel/vercel/pull/8978 is deployed
-            className="text-stone-400 underline hover:text-stone-200 transition-all"
-          >
-            Protected Page
-          </Link>
-          <p className="text-white">·</p>
-          <a
-            href="https://github.com/steven-tey/nextjs-typescript-starter"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-stone-400 underline hover:text-stone-200 transition-all"
-          >
-            GitHub
-          </a>
-          <p className="text-white">·</p>
-          <a
-            href="https://vercel.com/templates/next.js/prisma-postgres-auth-starter"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="text-stone-400 underline hover:text-stone-200 transition-all"
-          >
-            1-click Deploy to Vercel
-          </a>
-        </div>
-      </div>
+      </section>
     </div>
   );
 }
