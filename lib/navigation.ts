@@ -1,6 +1,6 @@
 export function getNavigation() {
     return [
-        { name: "Home", href: "#" },
+        { name: "Home", href: "/" },
         {
             name: "Projects",
             href: "#",
@@ -11,9 +11,9 @@ export function getNavigation() {
         },
         {
             name: "About Build2Learn",
-            href: "about-us"
+            href: "about"
         },
-        { name: "Login", href: "#" },
-        { name: "Signup", href: "#" },
+        { name: "Login", href: "login" },
+        { name: "Signup", href: "signup" },
     ];
 }

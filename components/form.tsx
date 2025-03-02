@@ -7,7 +7,7 @@ import toast from "react-hot-toast";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 
-export default function Form({ type }: { type: "login" | "register" }) {
+export default function Form({ type }: { type: "login" | "signup" }) {
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
@@ -91,11 +91,10 @@ export default function Form({ type }: { type: "login" | "register" }) {
       </div>
       <button
         disabled={loading}
-        className={`${
-          loading
-            ? "cursor-not-allowed border-gray-200 bg-gray-100"
-            : "border-black bg-black text-white hover:bg-white hover:text-black"
-        } flex h-10 w-full items-center justify-center rounded-md border text-sm transition-all focus:outline-none`}
+        className={`${loading
+          ? "cursor-not-allowed border-gray-200 bg-gray-100"
+          : "border-black bg-black text-white hover:bg-white hover:text-black"
+          } flex h-10 w-full items-center justify-center rounded-md border text-sm transition-all focus:outline-none`}
       >
         {loading ? (
           <LoadingDots color="#808080" />
@@ -106,7 +105,7 @@ export default function Form({ type }: { type: "login" | "register" }) {
       {type === "login" ? (
         <p className="text-center text-sm text-gray-600">
           Don&apos;t have an account?{" "}
-          <Link href="/register" className="font-semibold text-gray-800">
+          <Link href="/signup" className="font-semibold text-gray-800">
             Sign up
           </Link>{" "}
           for free.

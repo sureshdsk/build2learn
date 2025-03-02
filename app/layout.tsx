@@ -5,7 +5,7 @@ import { Inter } from "next/font/google";
 import { Toaster } from "react-hot-toast";
 import { Suspense } from "react";
 import Header from "@/components/header/header";
-
+import Footer from "@/components/footer/footer";
 const inter = Inter({
   variable: "--font-inter",
   subsets: ["latin"],
@@ -44,7 +44,7 @@ export default async function RootLayout({
           <Header />
         </Suspense>
         {children}
-
+        <Footer />
       </body>
     </html>
   );

@@ -7,8 +7,11 @@ export default function Home() {
       {/* Hero Section */}
       <section className="relative bg-gradient-to-br from-indigo-600 to-purple-700 text-white">
         <div className="absolute inset-0 bg-black opacity-10 pattern-grid"></div>
-        <div className="flex align-items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32 relative">
-          <div className="">
+        <div className="flex flex-col-reverse md:flex-row items-center max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 lg:py-32 relative">
+          <div className="w-full md:w-1/2 mt-8 md:mt-0">
+            <Image src="/images/hero-fold.svg" width={800} height={600} alt="Community Platform" />
+          </div>
+          <div className="w-full md:w-1/2">
             <h1 className="text-5xl md:text-6xl font-bold leading-tight mb-6">
               Build2Learn
             </h1>
@@ -19,15 +22,10 @@ export default function Home() {
               <button className="bg-white text-indigo-600 px-8 py-4 rounded-lg font-semibold text-lg hover:bg-purple-50 transition-colors flex items-center">
                 Join Community <ArrowRight className="ml-2 h-5 w-5" />
               </button>
-              <button className="border-2 border-white text-white px-8 py-4 rounded-lg font-semibold text-lg hover:bg-white/10 transition-colors">
-                Learn More
-              </button>
             </div>
           </div>
-          <div className="">
-            <Image src="/images/hero-fold.svg" width={800} height={600} alt="Community Platform" />
-          </div>
         </div>
+
         {/* <div className="absolute bottom-0 left-0 right-0 text-center">
           <ChevronDown className="h-8 w-8 mx-auto mb-4 animate-bounce text-purple-200" />
         </div> */}
@@ -138,49 +136,6 @@ export default function Home() {
           </button>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="bg-gray-900 text-gray-400 py-12">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-4 gap-8">
-            <div>
-              <h3 className="text-white font-semibold mb-4">About</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="hover:text-white transition-colors">Our Story</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Team</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Careers</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-4">Community</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="hover:text-white transition-colors">Guidelines</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Events</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Forums</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-4">Support</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="hover:text-white transition-colors">Help Center</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Contact</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Privacy</a></li>
-              </ul>
-            </div>
-            <div>
-              <h3 className="text-white font-semibold mb-4">Connect</h3>
-              <ul className="space-y-2">
-                <li><a href="#" className="hover:text-white transition-colors">Twitter</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">LinkedIn</a></li>
-                <li><a href="#" className="hover:text-white transition-colors">Instagram</a></li>
-              </ul>
-            </div>
-          </div>
-          <div className="border-t border-gray-800 mt-12 pt-8 text-center">
-            <p>&copy; 2025 Community Platform. All rights reserved.</p>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
